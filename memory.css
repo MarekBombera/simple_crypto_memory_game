@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: grid;
+	place-items: center;
+}
+
+.content-container {
+	display: grid;
+	place-items: center;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	width: 600px;
+	gap: 15px;
+	margin-top: 20px;
+}
+
+.counter-container {
+	display: grid;
+	place-items: center;
+	margin-top: 30px;
+}
+
+img {
+	-user-drag: none;
+	-webkit-user-drag: none;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+#reset {
+	font-size: 0.9rem;
+	width: 80px;
+	border-radius: 10px;
+}
+
+#attempts,
+h3 {
+	font-family: Quicksand;
+}
+
+.front-face {
+	transform: scale(0.9);
+	width: 175px;
+	height: 200px;
+}
+
+.back-face {
+	width: 175px;
+	height: 200px;
+	position: absolute;
+	place-items: center;
+	display: block;
+	z-index: 1;
+}
+
+.back-face:active {
+	transform: scale(0.97);
+	transition: transform 0.2s;
+}
+
+.hidden {
+	display: none;
+	transition: transform 0.2s;
+}
+
+.vitalik {
+	position: absolute;
+	margin-top: 100px;
+	margin-left: -16%;
+	z-index: 2;
+	transform: scale(1.75);
+	display: none;
+}
+
+.reset {
+	display: block;
+}
